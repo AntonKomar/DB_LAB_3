@@ -1,4 +1,4 @@
-package LabTests;
+package labTests;
 
 import org.junit.runner.*;
 

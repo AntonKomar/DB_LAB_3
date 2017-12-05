@@ -1,4 +1,4 @@
-package LabTests;
+package labTests;
 
 import lab_3_java.*;
 import org.junit.*;
