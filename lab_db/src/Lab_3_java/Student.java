@@ -1,4 +1,4 @@
-package Lab_3_java;
+package lab_3_java;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ public class Student {
     private String name;
     private String sName;
     private int id;
-    private int fac_id;
+    private int faculID;
 
     public static List<Student> students = new ArrayList<>();
 
@@ -18,7 +18,7 @@ public class Student {
         this.id = id;
         this.name = Name;
         this.sName = SName;
-        this.fac_id = fac_id;
+        this.faculID = fac_id;
     }
 
     public void setId(int id) {
@@ -29,12 +29,12 @@ public class Student {
         return id;
     }
 
-    public void setFac_id(int f){
-        this.fac_id = f;
+    public void setFaculID(int f){
+        this.faculID = f;
     }
 
-    public int getFac_id(){
-        return fac_id;
+    public int getFacid(){
+        return faculID;
     }
 
     public void setName(String firstName) {

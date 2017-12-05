@@ -1,4 +1,4 @@
-package Lab_3_java;
+package lab_3_java;
 
 import java.sql.*;
 import java.sql.DriverManager;

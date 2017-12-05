@@ -1,4 +1,4 @@
-package Lab_3_java;
+package lab_3_java;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,7 +10,7 @@ public class Main {
        Connector.connector();
        getFaculties();
        getStudents();
-       getStudents_subjects();
+       getStudentsSubjects();
        getSubjects();
        getTeachers();
 }
@@ -53,15 +53,15 @@ public class Main {
         }
     }
 
-    public void getStudents_subjects() {
+    public void getStudentsSubjects() {
         try {
             Statement stmt = Connector.connection.createStatement();
             String sql = "SELECT * FROM students_subjects";
             ResultSet result = stmt.executeQuery(sql);
             while (result.next()) {
-                student_subject stud_subj = new student_subject(result.getInt(1), result.getInt(2));
-                if(!student_subject.student_subjects.contains(stud_subj)) {
-                    student_subject.student_subjects.add(stud_subj);
+                StudentSubject stud_subj = new StudentSubject(result.getInt(1), result.getInt(2));
+                if(!StudentSubject.StudentSubjects.contains(stud_subj)) {
+                    StudentSubject.StudentSubjects.add(stud_subj);
                 }
             }
             System.out.println("Connected");

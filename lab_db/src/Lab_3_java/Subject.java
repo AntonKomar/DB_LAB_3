@@ -1,4 +1,4 @@
-package Lab_3_java;
+package lab_3_java;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ public class Subject {
 
     private String name;
     private int id;
-    private int teach_id;
+    private int teachId;
 
     public static List<Subject> subjects = new ArrayList<>();
 
@@ -16,7 +16,7 @@ public class Subject {
     public Subject(int id, String Name, int teach_id) {
         this.id = id;
         this.name = Name;
-        this.teach_id = teach_id;
+        this.teachId = teach_id;
 
     }
 
@@ -28,12 +28,12 @@ public class Subject {
         return id;
     }
 
-    public int getTeach_id() {
-        return teach_id;
+    public int getTeachId() {
+        return teachId;
     }
 
-    public void setTeach_id(int id) {
-        this.teach_id = teach_id;
+    public void setTeachId(int id) {
+        this.teachId = teachId;
     }
 
     public void setName(String firstName) {
