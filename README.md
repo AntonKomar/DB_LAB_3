@@ -1,1 +1,1 @@
-<a href = "https://www.codacy.com/app/KomarAnton/DB_LAB_3/dashboard">codecy.com - общая оценка</a>
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2e26a4f2bc904c339ce735da88eb7649)](https://www.codacy.com/app/KomarAnton/DB_LAB_3?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=KomarAnton/DB_LAB_3&amp;utm_campaign=Badge_Grade)
