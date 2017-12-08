@@ -9,7 +9,10 @@ install:
 
 after_success:
   - wget https://github.com/codacy/codacy-coverage-reporter/releases/download/2.0.1/codacy-coverage-reporter-2.0.1-assembly.jar -O ccr.jar
-  - java -cp ccr.jar com.codacy.CodacyCoverageReporter -l Java -r ./resteasy-spring-boot-starter/target/site/cobertura/coverage.xml --projectToken 7afdc2a8c38b41aab4894c1d5332ffbe
+  - java -cp codacy-coverage-reporter-2.0.1-assembly.jar com.codacy.CodacyCoverageReporter -l Java -r jacoco.xml
+  - export CODACY_PROJECT_TOKEN=7afdc2a8c38b41aab4894c1d5332ffbe
+  - codacy-coverage-reporter -l Java --commitUUID "mycommituuid" -r coverage.xml
+  - codacy-coverage-reporter -l Java -r coverage.xml
 
 services:
   - postgresql
