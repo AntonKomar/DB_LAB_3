@@ -1,3 +1,5 @@
+CODACY_PROJECT_TOKEN = 7afdc2a8c38b41aab4894c1d5332ffbe
+
 language: java
 
 java:
