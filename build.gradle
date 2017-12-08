@@ -32,9 +32,9 @@ task('init') << {
         activities {
             main {
                 changeLogFile changeLog
-                url 'jdbc:postgresql://localhost:5432/postgres'
-                username 'postgres'
-                password '230699'
+                url 'jdbc:postgresql://217.23.154.1:5432/labdb'
+                username 'antkom'
+                password 'antonkomaria61'
                 driver "org.postgresql.Driver"
             }
         }
@@ -49,9 +49,9 @@ task('clear_tab') << {
         activities {
             main {
                 changeLogFile changeLog_1
-                url 'jdbc:postgresql://localhost:5432/postgres'
-                username 'postgres'
-                password '230699'
+                url 'jdbc:postgresql://217.23.154.1:5432/labdb'
+                username 'antkom'
+                password 'antonkomaria61'
                 driver "org.postgresql.Driver"
             }
         }
@@ -66,9 +66,9 @@ task('prod') << {
         activities {
             main {
                 changeLogFile changeLog_2
-                url 'jdbc:postgresql://localhost:5432/postgres'
-                username 'postgres'
-                password '230699'
+                url 'jdbc:postgresql://217.23.154.1:5432/labdb'
+                username 'antkom'
+                password 'antonkomaria61'
                 driver "org.postgresql.Driver"
             }
         }
@@ -83,14 +83,83 @@ def changeLog_3 = "$projectDir/lab_db/src/liquibase/008-delete-all-table.xml"
             activities {
                 main {
                     changeLogFile changeLog_3
-                    url 'jdbc:postgresql://localhost:5432/postgres'
-                    username 'postgres'
-                    password '230699'
+                    url 'jdbc:postgresql://217.23.154.1:5432/labdb'
+                    username 'antkom'
+                    password 'antonkomaria61'
                     driver "org.postgresql.Driver"
                 }
             }
         }
     }
+
+def changeLog_4 = "$projectDir/lab_db/src/liquibase/005-update-notes.xml"
+
+task('upt_note') << {
+    println "executing upt_note"
+    liquibase {
+        activities {
+            main {
+                changeLogFile changeLog_4
+                url 'jdbc:postgresql://217.23.154.1:5432/labdb'
+                username 'antkom'
+                password 'antonkomaria61'
+                driver "org.postgresql.Driver"
+            }
+        }
+    }
+}
+
+def changeLog_5 = "$projectDir/lab_db/src/liquibase/010-repl-new-col.xml"
+
+task('repl-new-col') << {
+    println "executing repl-new-col"
+    liquibase {
+        activities {
+            main {
+                changeLogFile changeLog_5
+                url 'jdbc:postgresql://217.23.154.1:5432/labdb'
+                username 'antkom'
+                password 'antonkomaria61'
+                driver "org.postgresql.Driver"
+            }
+        }
+    }
+}
+
+def changeLog_6 = "$projectDir/lab_db/src/liquibase/012-delete-table-replace-data.xml"
+
+task('replace_data') << {
+    println "executing replace_data"
+    liquibase {
+        activities {
+            main {
+                changeLogFile changeLog_6
+                url 'jdbc:postgresql://217.23.154.1:5432/labdb'
+                username 'antkom'
+                password 'antonkomaria61'
+                driver "org.postgresql.Driver"
+            }
+        }
+    }
+}
+
+def changeLog_7 = "$projectDir/lab_db/src/liquibase/007-delete-some-notes.xml"
+
+task('del_note') << {
+    println "del_note"
+    liquibase {
+        activities {
+            main {
+                changeLogFile changeLog_7
+                url 'jdbc:postgresql://217.23.154.1:5432/labdb'
+                username 'antkom'
+                password 'antonkomaria61'
+                driver "org.postgresql.Driver"
+            }
+        }
+    }
+}
+
 
 
 

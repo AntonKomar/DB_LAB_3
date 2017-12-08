@@ -1,17 +1,42 @@
 package lab_3_java;
 
+import java.io.FileNotFoundException;
 import java.sql.*;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.File;
 
 public class Connector {
 
     public static Connection connection;
 
+    public static void main(String[] args) {
+        Connector.connector();
+    }
     public static void connector() {
-           String userName = "postgres";
-           String password = "230699";
-           String url = "jdbc:postgresql://localhost:5432/postgres";
+        String url = "jdbc:postgresql://217.23.154.1:5432/labdb";
+        String userName = "antkom";
+        String password = "antonkomaria61";
+//        String s = "";
+//        Scanner in = null;
+//
+//        try {
+//            in = new Scanner(new File("lab_db/src/signIn.txt"));
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        while(in.hasNext()) {
+//            s += in.nextLine();
+//        }
+//        in.close();
+//
+//        String[] data = s.split(" ");
+//        url = data[0];
+//        userName = data[1];
+//        password = data[2];
+
            try {
                Class.forName("org.postgresql.Driver");
                connection = DriverManager.getConnection(url, userName, password);
