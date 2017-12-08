@@ -1,12 +1,8 @@
 package lab_3_java;
 
-import java.io.FileNotFoundException;
 import java.sql.*;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.io.File;
 
 public class Connector {
 
