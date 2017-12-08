@@ -8,4 +8,4 @@
  
 [![Build Status](https://travis-ci.org/KomarAnton/DB_LAB_3.svg?branch=master)](https://travis-ci.org/KomarAnton/DB_LAB_3)
 
-[![Codecov branch](https://img.shields.io/codecov/c/github/codecov/example-python/master.svg)]()
+
