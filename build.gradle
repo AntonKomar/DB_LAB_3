@@ -160,6 +160,23 @@ task('del_note') << {
     }
 }
 
+def changeLog_8 = "$projectDir/lab_db/src/liquibase/006-delete-table.xml"
+
+task('del_tab') << {
+    println "del_tab"
+    liquibase {
+        activities {
+            main {
+                changeLogFile changeLog_8
+                url 'jdbc:postgresql://217.23.154.1:5432/labdb'
+                username 'antkom'
+                password 'antonkomaria61'
+                driver "org.postgresql.Driver"
+            }
+        }
+    }
+}
+
 
 
 
