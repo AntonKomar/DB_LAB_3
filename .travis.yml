@@ -10,4 +10,4 @@ services:
   - postgresql
   
 script:
-  - jdk test \lab_db\src\labTests\MainTest.java
+  - test \lab_db\src\labTests\MainTest.java
