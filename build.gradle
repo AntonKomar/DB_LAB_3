@@ -33,8 +33,8 @@ task('init') << {
             main {
                 changeLogFile changeLog
                 url 'jdbc:postgresql://217.23.154.1:5432/labdb'
-                username 'antkom'
-                password 'antonkomaria61'
+                username 'dbroot'
+                password 'pinkhorsegohome97'
                 driver "org.postgresql.Driver"
             }
         }
@@ -50,8 +50,8 @@ task('clear_tab') << {
             main {
                 changeLogFile changeLog_1
                 url 'jdbc:postgresql://217.23.154.1:5432/labdb'
-                username 'antkom'
-                password 'antonkomaria61'
+                username 'dbroot'
+                password 'pinkhorsegohome97'
                 driver "org.postgresql.Driver"
             }
         }
@@ -67,8 +67,8 @@ task('prod') << {
             main {
                 changeLogFile changeLog_2
                 url 'jdbc:postgresql://217.23.154.1:5432/labdb'
-                username 'antkom'
-                password 'antonkomaria61'
+                username 'dbroot'
+                password 'pinkhorsegohome97'
                 driver "org.postgresql.Driver"
             }
         }
@@ -84,8 +84,8 @@ def changeLog_3 = "$projectDir/lab_db/src/liquibase/008-delete-all-table.xml"
                 main {
                     changeLogFile changeLog_3
                     url 'jdbc:postgresql://217.23.154.1:5432/labdb'
-                    username 'antkom'
-                    password 'antonkomaria61'
+                    username 'dbroot'
+                    password 'pinkhorsegohome97'
                     driver "org.postgresql.Driver"
                 }
             }
@@ -101,8 +101,8 @@ task('upt_note') << {
             main {
                 changeLogFile changeLog_4
                 url 'jdbc:postgresql://217.23.154.1:5432/labdb'
-                username 'antkom'
-                password 'antonkomaria61'
+                username 'dbroot'
+                password 'pinkhorsegohome97'
                 driver "org.postgresql.Driver"
             }
         }
@@ -118,8 +118,8 @@ task('repl-new-col') << {
             main {
                 changeLogFile changeLog_5
                 url 'jdbc:postgresql://217.23.154.1:5432/labdb'
-                username 'antkom'
-                password 'antonkomaria61'
+                username 'dbroot'
+                password 'pinkhorsegohome97'
                 driver "org.postgresql.Driver"
             }
         }
@@ -135,8 +135,8 @@ task('replace_data') << {
             main {
                 changeLogFile changeLog_6
                 url 'jdbc:postgresql://217.23.154.1:5432/labdb'
-                username 'antkom'
-                password 'antonkomaria61'
+                username 'dbroot'
+                password 'pinkhorsegohome97'
                 driver "org.postgresql.Driver"
             }
         }
@@ -152,8 +152,8 @@ task('del_note') << {
             main {
                 changeLogFile changeLog_7
                 url 'jdbc:postgresql://217.23.154.1:5432/labdb'
-                username 'antkom'
-                password 'antonkomaria61'
+                username 'dbroot'
+                password 'pinkhorsegohome97'
                 driver "org.postgresql.Driver"
             }
         }
@@ -169,13 +169,15 @@ task('del_tab') << {
             main {
                 changeLogFile changeLog_8
                 url 'jdbc:postgresql://217.23.154.1:5432/labdb'
-                username 'antkom'
-                password 'antonkomaria61'
+                username 'dbroot'
+                password 'pinkhorsegohome97'
                 driver "org.postgresql.Driver"
             }
         }
     }
 }
+
+
 
 
 
