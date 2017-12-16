@@ -1,8 +1,11 @@
 package lab_3_java;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.sql.*;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class Connector {
 
@@ -12,26 +15,26 @@ public class Connector {
         Connector.connector();
     }
     public static void connector() {
-        String url = "jdbc:postgresql://217.23.154.1:5432/labdb";
-        String userName = "antkom";
-        String password = "antonkomaria61";
-//        String s = "";
-//        Scanner in = null;
-//
-//        try {
-//            in = new Scanner(new File("lab_db/src/signIn.txt"));
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//        while(in.hasNext()) {
-//            s += in.nextLine();
-//        }
-//        in.close();
-//
-//        String[] data = s.split(" ");
-//        url = data[0];
-//        userName = data[1];
-//        password = data[2];
+        String url;
+        String userName;
+        String password;
+                String s = "";
+        Scanner in = null;
+
+        try {
+            in = new Scanner(new File("lab_db/src/signIn.txt"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        while(in.hasNext()) {
+            s += in.nextLine();
+        }
+        in.close();
+
+        String[] data = s.split(" ");
+        url = data[0];
+        userName = data[1];
+        password = data[2];
 
            try {
                Class.forName("org.postgresql.Driver");

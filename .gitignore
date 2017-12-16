@@ -3,3 +3,6 @@
 out/
 gradle.properties
 signIn.txt
+*.html
+.css/
+.img/
